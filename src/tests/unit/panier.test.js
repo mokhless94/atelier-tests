@@ -1,0 +1,10 @@
+const { total } = require('../../panier');
+describe('total()', () => {
+test('retourne 0 pour un panier vide', () => {
+  expect(total([])).toBe(0);
+});
+test('ignore une ligne dont la quantité est 0', () => {
+  const items = [{ prix: 10, qte: 0 }, { prix: 5, qte: 2 }];
+  expect(total(items)).toBe(10);
+});
+});
