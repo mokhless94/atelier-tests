@@ -14,4 +14,5 @@ describe('total()', () => {
     const items = [{ prix: -5, qte: 1 }];
     expect(() => total(items)).toThrow('Prix négatif');
   });
+  
 });
